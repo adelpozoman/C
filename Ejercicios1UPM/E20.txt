@@ -1,0 +1,1 @@
+Mientras que en los dos scan no metas dos numeros enteros va a repetir el bucle, para salir tienes que meter correctamente dos numeros enteros
