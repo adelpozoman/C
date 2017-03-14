@@ -6,12 +6,12 @@
 int main(void){
 	
 	char u;
-	int m; //la medida que tengamos( el númkero de grados)
-	printf("¿Quieres pasar de Centigrados a Farenheit o de Farenheit a Centigrados?\n Escribe c para la primera opción y f para la segunda\n");
+	int m; //la medida que tengamos( el nÃºmkero de grados)
+	printf("Â¿Quieres pasar de Centigrados a Farenheit o de Farenheit a Centigrados?\n Escribe c para la primera opciÃ³n y f para la segunda\n");
 	scanf("%s", &u);
 	//nos pasa de un tipo a otro, dependiendo del inicial
 	if(u == 'c'){
-		printf("¿Escribe un numero natural de grados centigrados\n");
+		printf("Â¿Escribe un numero natural de grados centigrados\n");
 		scanf("%i", &m);
 		printf("Ese valor corresponde a %d grados Farenheit\n", centiafarenh(m));
 		}
