@@ -1,0 +1,4 @@
+a) hay dos \\, es decir \\n. No daría ningún error
+b) faltan las putas comas
+c)no se ha declarado entero en la parte que se ve
+d) imposible saber de qué habla
