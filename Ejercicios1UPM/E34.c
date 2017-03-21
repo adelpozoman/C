@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
+//ejercicio 34
 
 int main(){
 	puts("Para calcular combinaciones de X elementos en Y huecos, introduce ambos números");
