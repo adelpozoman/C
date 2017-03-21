@@ -10,7 +10,6 @@ main(){
 	puts("Introduce un número al número al que lo quieres elevar");
 	scanf("%d %d", &n, &p);
 	printf("%d elevado a %d es ", n, p);
-	
 	int mult= 0;
 	int resultado;
 	int nresultado;
@@ -18,12 +17,8 @@ main(){
 	do{
 		mult++;
 		resultado = n * nresultado;
-		nresultado = resultado;
-		
-		
-		
+		nresultado = resultado;	
 	}while(mult<p);
-	printf("%d",nresultado);
-		
+	printf("%d",nresultado);	
 	return EXIT_SUCCESS;
 }
