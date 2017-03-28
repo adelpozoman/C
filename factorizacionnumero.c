@@ -20,8 +20,8 @@ int main(){
 	
 	int contadorimprimir=0;
 	puts("La factorización es:");
-	do{
-		printf("%i * ",divisores[contadorimprimir]);	
+	do{	printf("%i * ",divisores[contadorimprimir]);	
+		contadorimprimir++;
 	}while(contadorimprimir<d);
 return 0;}
 
