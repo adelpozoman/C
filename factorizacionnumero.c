@@ -21,12 +21,7 @@ int main(){
 	int contadorimprimir=0;
 	puts("La factorización es:");
 	do{
-		printf("%i",divisores[contadorimprimir]);
-		contadorimprimir++;
-		if(contadorimprimir<d){printf("*");	}	
+		printf("%i * ",divisores[contadorimprimir]);	
 	}while(contadorimprimir<d);
-	contadorimprimir++;
-	printf("%i",divisores[contadorimprimir]);
-	
 return 0;}
 
