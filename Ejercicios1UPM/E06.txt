@@ -1,0 +1,2 @@
+aumenta el valor de var1 25 veces en una unidad
+y esas 25 veces multiplica var3 por su valor anterior y por var1
