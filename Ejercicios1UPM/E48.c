@@ -4,26 +4,24 @@
 //ejercicio 48
 
 int main(){
-	int p,n, potencias[n];//n sera el largo de la tabla, p el numero de potencias o ancho
-	puts("Escribe el número de potencias que quieres obtener");
+	int p,n;//n sera el largo de la tabla, p el numero de potencias o ancho
+	puts("Escribe el nÃºmero de potencias que quieres obtener");
 	scanf("%i",&p);
-	puts("Escribe hasta que número quieres saber las potencias");
+	puts("Escribe hasta que nÃºmero quieres saber las potencias");
 	scanf("%i",&n);
-	int argo=1,argo2,argo4=1,largohecho, p2=p,n2=n;
+	int argo=1;
 	do{	printf("N^%i\t",argo);
-			argo++;		
-			}while(argo<=p);
+		argo++;		
+	}while(argo<=p);
 	puts("");
-	largohecho=1;
-		do{  argo2=1, n=0, potencias[0]=argo4;
-				do{ potencias[n]=potencias[0]*argo2;
-					argo2= potencias[n];
-					printf("%i\t", argo2);
-					n++;
-				}while(n<p);
-				argo4++;
-			puts("");	
-			}while(argo4<=n2);
-
-	return 0;system("pause");}
-
+	int potencias[n][p], c1=0,c2=0, anterior;
+	do{	potencias[c2][0]=c2+1, anterior=1, c1=0;
+		do{	potencias[c2][c1]=potencias[c2][0]*anterior;
+			anterior=potencias[c2][c1];
+			printf("%i\t",potencias[c2][c1]);
+			c1++;
+		}while(c1<p);
+	puts("");
+	c2++;
+	}while(c2<n);
+return 0;system("pause");}
