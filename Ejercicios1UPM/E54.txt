@@ -1,0 +1,3 @@
+en fopen(    __________ ,modo);
+en las _____ se pone un nombre de variable que tenga dentro un string de caracteres
+el nombre sin comillas ni mierdas
