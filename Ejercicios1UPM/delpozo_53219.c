@@ -30,7 +30,7 @@ int main(){
 	if(strcmp(opcion1,"Rectangulo")==0){puts("Rectangulo");
 		rectangulo(l);}
 	else if((strcmp(opcion1,"Rectangulo"))!=0&&(strcmp(opcion1,"Triangulo"))!=0){
-	puts("No has escrito ni \"Triangulo\" ni \"Rectangulo\"");break;}
+	puts("No has escrito ni \"Triangulo\" ni \"Rectangulo\"");}
 	}while(1);
 	system("pause");}
 
