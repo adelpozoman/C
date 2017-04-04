@@ -5,9 +5,9 @@
 
 
 identifica(){
-	puts("\t***Nombre:¡ngel del Pozo***");
+	puts("\t***Nombre:√Ångel del Pozo***");
 	puts("\t***Grupo: D102***");
-	puts("\t***MatrÌcula: 53219***");}
+	puts("\t***Matr√≠cula: 53219***");}
 char c;
 
 int main(){
@@ -15,14 +15,14 @@ int main(){
 	puts("Pulsa Ctrl + C para pausar la ejecucion");
 	do{
 	puts("\n*****Nueva ejecucion*****\n");
-	puts("øCu·l es el lado que quieres que tenga tu figura?");
+	puts("¬øCu√°l es el lado que quieres que tenga tu figura?");
 	int l;
-	while(scanf("%i",&l)!=1){puts("Puede ser que no hayas puesto un n˙mero");fflush(stdin);}
+	while(scanf("%i",&l)!=1){puts("Puede ser que no hayas puesto un n√∫mero");fflush(stdin);}
 	fflush(stdin);
-	puts("Dime quÈ car·cter quieres que sea el que haga tu figura (1 solo)");
+	puts("Dime qu√© car√°cter quieres que sea el que haga tu figura (1 solo)");
 	while(scanf("%c",&c)!=1){printf("La entrada no ha sido correcta");fflush(stdin);}
-	puts("Vamos a elegir entre dibujar un trÌangulo o un rect·ngulo");
-	puts("Para rectangulo escribe \"Rectangulo\" y para triangulo o pir·mide \"Triangulo\"");
+	puts("Vamos a elegir entre dibujar un tr√≠angulo o un rect√°ngulo");
+	puts("Para rectangulo escribe \"Rectangulo\" y para triangulo o pir√°mide \"Triangulo\"");
 	char opcion1[30];fflush(stdin);
 	gets(opcion1);
 	if(strcmp(opcion1,"Triangulo")==0){puts("Triangulo");
@@ -48,8 +48,8 @@ rectangulo(int l){
 
 
 triangulo(l){
-	puts("Me vas a decir la orientaciÛn que quieres que tenga el ·ngulo recto tu tri·ngulo");
-	puts("1:Arriba izquierda\t2:Abajo izquierda\t3:Pir·mide");
+	puts("Me vas a decir la orientaci√≥n que quieres que tenga el √°ngulo recto tu tri√°ngulo");
+	puts("1:Arriba izquierda\t2:Abajo izquierda\t3:Pir√°mide");
 	int orientacion;
 	fflush(stdin);
 	orientar:
