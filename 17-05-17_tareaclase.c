@@ -30,7 +30,7 @@ do{
 	char opcion[20];
 	fflush(stdin);
 	gets(opcion);
-	if(strcmp(opcion,"Modulo")==0){
+	if(strcmp(opcion,"Modulo")==0||strcmp(opcion,"modulo")==0){
 		puts("El modulo del primer vector es :");
 		int mod1,mod2,contador=0,suma,suma2=0;
 		do{
@@ -51,7 +51,7 @@ do{
 		mod2=sqrt(suma2);
 		printf("%i unidades\n",mod2);
 	}	
-	else if(strcmp(opcion,"Producto escalar")==0){
+	else if(strcmp(opcion,"Producto escalar")==0||strcmp(opcion,"producto escalar")==0){
 		puts("Dime qué escalar quieres usar");fflush(stdin);
 		int escalar;scanf("%i",&escalar);
 		int argo=0;
@@ -66,12 +66,12 @@ do{
 		}while(argo<4);
 		
 	}
-	else if(strcmp(opcion,"Producto escalar usual")==0){
+	else if(strcmp(opcion,"Producto escalar usual")==0||strcmp(opcion,"producto escalar usual")==0){
 		puts("El producto escalar usual de un vector por el otro es:");
 		int suma;
 		printf("%i", (v1[0]*v2[0]+v1[1]*v2[1]+v1[2]*v2[2]+v1[3]*v2[3]));
 	}
-	else if(strcmp(opcion,"Suma")==0){
+	else if(strcmp(opcion,"Suma")==0||strcmp(opcion,"suma")==0){
 		puts("La suma de los dos vectores da el vector:");
 		int vectorsuma[4];
 		int contador=0;
@@ -80,7 +80,7 @@ do{
 		}while(contador<4);
 		printf("v1: %i\t v2: %i\t v3: %i\t v4: %i",vectorsuma[0],vectorsuma[1],vectorsuma[2],vectorsuma[3]);
 	}
-	else if(strcmp(opcion,"Componentes")==0){
+	else if(strcmp(opcion,"Componentes")==0||strcmp(opcion,"componentes")==0){
 		int min=v1[0],max=v1[0], posmin,posmax;
 		argo=0;
 		do{
@@ -96,12 +96,26 @@ do{
 				posmax=argo;}
 			argo++;
 		}while(argo<4);
-		
-		printf("El minimo es v1[%i]=%i y el maximo es v1[%i]=%i",posmin,min,posmax,max);
+		printf("El minimo es v1[%i]=%i y el maximo es v1[%i]=%i\n",posmin,min,posmax,max);
+		min=v2[0],max=v2[0];
+		argo=0;
+		do{
+			if(v2[argo]<min){
+				min=v2[argo];
+				posmin=argo;}
+			argo++;
+		}while(argo<4);
+		argo=0;
+		do{
+			if(v2[argo]>max){
+				max=v2[argo];
+				posmax=argo;}
+			argo++;
+		}while(argo<4);
+		printf("El minimo es v2[%i]=%i y el maximo es v2[%i]=%i\n",posmin,min,posmax,max);
 		}
 	else{
 		puts("No has elegido correctamente ninguna opcion");
 		goto elige;}
 }while(1);
 return 0;}
-
