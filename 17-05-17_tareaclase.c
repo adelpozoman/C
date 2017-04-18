@@ -96,8 +96,6 @@ do{
 		
 		printf("El minimo es v1[%i]=%i y el maximo es v1[%i]=%i",posmin,min,posmax,max);
 		}
-		
-	}
 	else{
 		puts("No has elegido correctamente ninguna opcion");
 		goto elige;}
