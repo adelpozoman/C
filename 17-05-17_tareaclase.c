@@ -10,6 +10,9 @@ int main(){
 do{
 	int v1[4],v2[4];
 	int argo=0;
+	puts("\n*********************");
+	puts("***Nueva ejecucion***");
+	puts("*********************");
 	do{
 		printf("v[%i]=",argo);
 		scanf("%i",&v1[argo]);
