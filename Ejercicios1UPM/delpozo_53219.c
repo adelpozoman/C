@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <math.h>
 #include <time.h>
+#include <conio.h>
 
 
 identifica(){
@@ -17,10 +18,11 @@ int main(){
 	puts("\n*****Nueva ejecucion*****\n");
 	puts("¿Cuál es el lado que quieres que tenga tu figura?");
 	int l;
-	while(scanf("%i",&l)!=1){puts("Puede ser que no hayas puesto un número");fflush(stdin);}
+	while(scanf("%i",&l)!=1||getchar()!='\n'){puts("Puede ser que no hayas puesto un número");fflush(stdin);}
 	fflush(stdin);
 	puts("Dime qué carácter quieres que sea el que haga tu figura (1 solo)");
-	while(scanf("%c",&c)!=1){printf("La entrada no ha sido correcta");fflush(stdin);}
+	//while(scanf("%c",&c)!=1){printf("La entrada no ha sido correcta");fflush(stdin);}
+	c=getch();
 	puts("Vamos a elegir entre dibujar un tríangulo o un rectángulo");
 	puts("Para rectangulo escribe \"Rectangulo\" y para triangulo o pirámide \"Triangulo\"");
 	char opcion1[30];fflush(stdin);
@@ -111,10 +113,3 @@ t3(int l){
 		contadoralto++;
 	}while(contadoralto<l);
 }
-
-
-
-	
-	
-	
-	
