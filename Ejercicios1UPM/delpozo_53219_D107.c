@@ -6,9 +6,9 @@
 #include <time.h>
 
 void identifica(void){
-	puts("*****Ángel del Pozo*****");
+	puts("*****Ãngel del Pozo*****");
 	puts("**********53219*********");
-	puts("*********Diseño*********");
+	puts("*********DiseÃ±o*********");
 }
 void inicia(void){
 	puts("*****************");
@@ -22,10 +22,12 @@ while(1){
 	inicia();
 	puts("Decide el maximo y el minimo");
 	int max, min;
-	printf("Máximo:");scanf("%i",&max);
-	printf("Minimo:");scanf("%i",&min);
-		if(min>max){int aux;aux=max;max=min;min=aux;puts("Te los he ordenado");}
-	puts("Elige qué tipo de números quieres buscar en tu intervalo");
+	printf("MÃ¡ximo:");
+	while(scanf("%i",&max)!=1||getchar()!='\n'){puts("Puede ser que no hayas puesto un nÃºmero");fflush(stdin);}
+	printf("Minimo:");
+	while(scanf("%i",&min)!=1||getchar()!='\n'){puts("Puede ser que no hayas puesto un nÃºmero");fflush(stdin);}
+	if(min>max){int aux;aux=max;max=min;min=aux;puts("Te los he ordenado");}
+	puts("Elige quÃ© tipo de nÃºmeros quieres buscar en tu intervalo");
 	puts("\"Primos\"   \"Primos gemelos\"   \"Perfectos\"   \"Amigos\"   \"Malvados\"");
 	char opcion[15];
 	int numero=0;
@@ -73,7 +75,7 @@ while(1){
 			malvados(max,min);
 			break;
 		case 0:
-			puts("No has escogido ninguna opción correctamente");goto escoge;break;}
+			puts("No has escogido ninguna opciÃ³n correctamente");goto escoge;break;}
 }return 0;}
 
 primos(int max, int min){
@@ -87,14 +89,14 @@ primos(int max, int min){
 		}while(max%argo!=0);
 		max--;
 	}while(max>min);
-	puts("Los siguientes números primos en tu intervalo:");
+	puts("Los siguientes nÃºmeros primos en tu intervalo:");
 	int contadorimprimir=0;
 	do{
 		printf("%i\t\t",primos[contadorimprimir]);
 		contadorimprimir++;
 		if(contadorimprimir%4==0){puts("");}//para que la tabla quede bonita
 	}while(contadorimprimir<p);
-	printf("\nEn total son %i números primos\n",p); 
+	printf("\nEn total son %i nÃºmeros primos\n",p); 
 return 0;}
 
 primosgemelos(int max, int min){
@@ -115,7 +117,7 @@ primosgemelos(int max, int min){
 			printf("Gemelos: %i y %i\n", primos[contadorimprimir+1],primos[contadorimprimir]);}
 		contadorimprimir++;	
 	}while(contadorimprimir<p);
-	printf("\nEn total son %i números primos\n",p); 
+	printf("\nEn total son %i nÃºmeros primos\n",p); 
 	
 	
 return 0;}
@@ -171,7 +173,7 @@ amigos(int max, int min){
 return 0;}
 
 malvados(int max, int min){
-	puts("Vamos a ver qué números malvados hay en el intervalo");
+	puts("Vamos a ver quÃ© nÃºmeros malvados hay en el intervalo");
 	int contador=max, diasexto, sumb;
 	
 	
@@ -182,7 +184,7 @@ malvados(int max, int min){
 			
 			diasexto=diasexto/2;
 		}while(diasexto>0);
-		if(sumb%2==0)printf("%i es un número malvado\n",contador);
+		if(sumb%2==0)printf("%i es un nÃºmero malvado\n",contador);
 		
 		
 		contador--;
