@@ -5,7 +5,7 @@
 /*ejercicio35 */
 main(){
 	int n;
-	puts("Introduce un número\n");
+	puts("Introduce un número");
 	do{	while(scanf("%i",&n)!=1||getchar()!='\n'||n<0){puts("Puede ser que no hayas puesto un número");fflush(stdin);}
 		printf("Has elegido %i\n", n);
 	}while(1);
