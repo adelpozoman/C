@@ -4,13 +4,9 @@
 #include <string.h>
 /*ejercicio21 */
 main(){
-
-	int n,s;
+	int n;
 	puts("Introduce un número\n");
-	do{
-		if(scanf("%i",&n)!=1){	printf("No has ingresado un número");
-								while(getchar()!='\n');}
-		else if(n<0){			puts("Has puesto un numero negativo\n");}
-		else{					printf("Tu número es %i\n",n);		}//aqui podria cerrar el cilo haciendo argo=1 y en while argo!=1
+	do{	while(scanf("%i",&n)!=1||getchar()!='\n'){puts("Puede ser que no hayas puesto un número");fflush(stdin);}
+		printf("Has elegido %i\n", n);
 	}while(1);
 	return EXIT_SUCCESS;}
