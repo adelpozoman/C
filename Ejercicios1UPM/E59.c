@@ -7,16 +7,16 @@
 //E59
 
 main(){
-	puts("Te voy a multiplicar una matriz columna por otra.\nEl número de columnas de la primera ha de ser el mismo que el de filas de la segunda");
+	puts("Te voy a multiplicar una matriz por otra.\nEl nÃºmero de columnas de la primera ha de ser el mismo que el de filas de la segunda");
 	int f1, c1f2, c2;
 	//f1 numero filas de la primera
 	//c2 numero de columnas de la segunda
-	//c1f2 número de columnas de la primera o de filas de la segunda
+	//c1f2 nÃºmero de columnas de la primera o de filas de la segunda ( tienen que ser las mismas, carajote)
 	printf("Numero de filas primera=");scanf("%i",&f1);
-	printf("Número columnas primera o filas segunda=");scanf("%i",&c1f2);
-	printf("Número de columnas segunda=");scanf("%i",&c2);
+	printf("NÃºmero columnas primera o filas segunda=");scanf("%i",&c1f2);
+	printf("NÃºmero de columnas segunda=");scanf("%i",&c2);
 	int m1[f1][c1f2], m2[c1f2][c2], mresultado[f1][c2];
-	puts("Ahora vas a rellenar las matrices");
+	puts("Ahora vas a rellenar las matrices, de izquierda a derecha fila por fila");
 	int contadorancho, contadorlargo;
 	contadorlargo=0;
 	do{	contadorancho=0;
@@ -34,7 +34,7 @@ main(){
 		}while(contadorancho<c2);
 		contadorlargo++;
 	}while(contadorlargo<c1f2);
-//PODRÍA HABER HECHO UN SOLO CICLO EN VEZ DE 2 Y HACER LAS DOS MATRICES, METIENDO EN SCANF UN PUNTERO QUE INDIQUE A UNA MARTRIZ EN EL PRIMER RECORRIEDO Y A LA OTRA EN EL SEGUNDO
+//PODRÃA HABER HECHO UN SOLO CICLO EN VEZ DE 2 Y HACER LAS DOS MATRICES, METIENDO EN SCANF UN PUNTERO QUE INDIQUE A UNA MARTRIZ EN EL PRIMER RECORRIEDO Y A LA OTRA EN EL SEGUNDO
 //ahora las cuentas
 	puts("El producto tiene como resultado:");
 	int sum, contadormult;
