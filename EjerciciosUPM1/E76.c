@@ -7,9 +7,9 @@
 //E76
 
 void identifica(void){
-	puts("*****¡ngel del Pozo*****");
+	puts("*****√Ångel del Pozo*****");
 	puts("**********53219*********");
-	puts("*********DiseÒo*********");
+	puts("*********Dise√±o*********");
 }
 
 
