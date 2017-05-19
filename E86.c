@@ -59,14 +59,14 @@ identifica();
 	
 //encontrados es el numero encontrado
 	int encontrados;
-	int silla[encontrados][2]; //es un poco chungo hacerlo variable
+	int silla[encontrados]; //es un poco chungo hacerlo variable
 	encontrados=0;
 	f=0;
 	do{	c=0;
 		do{
-			if(1==puntosilla(filas, columnas,f,c,m1)){
-				silla[encontrados][0]=f;
-				silla[encontrados][1]=c;
+			if(1==puntosilla(filas, columnas,f,c,m1,m2)){
+				printf("seguro que he encontrado 1, en fila %i columna %i\n",f,c);
+				silla[encontrados]=m1[f][c];
 				encontrados++;}
 			c++;
 		}while(c<columnas);
@@ -76,7 +76,7 @@ identifica();
 	printf("He encontrado %i puntos de silla, los cuales son (en fila y columna):\n",encontrados);
 	int gazpacho=0;
 	while(gazpacho<encontrados){
-		printf("Pto.%i--x:%i\ty:%i\n",gazpacho+1,silla[gazpacho][0],silla[gazpacho][1]);
+		printf("Pto.%i--x:%i\n",gazpacho+1,silla[gazpacho]);
 		gazpacho++;}
 return EXIT_SUCCESS;}
 
@@ -91,23 +91,16 @@ void llenam2(int filas, int columnas, int (*m1)[columnas], int (*m2)[filas]){
 		
 		cuenta2++;
 	}while(cuenta2<columnas);
-	
-	
-	
-	
 }
 
-
-
-int puntosilla(int filas, int columnas, int f, int c, int (*m1)[columnas]){
+int puntosilla(int filas, int columnas, int f, int c, int (*m1)[columnas], int (*m2[filas])){
 	puts("Compruebo (mal)");
-	if(1==min(filas, columnas,f,c,m1)&&1==max())return 1;
+	if(1==min(filas, columnas,f,c,m1)&&1==max(columnas,filas,f,c,m2))return 1;//lo q se mete en max es lo q hay q arreglar
 //en la segunda funcion hay q meter la traspuesta y ver si es maximo en su fila de la traspuesta
-	if(1==max(filas, columnas,f,c,m1)&&1==min())return 1;
+	if(1==max(filas, columnas,f,c,m1)&&1==min(columnas,filas,f,c,m2))return 1;
 //aqui en min se mete la traspuesta
 	return 0;}
 //punto de silla comprueba si nuestro numero es maximo o minimo en su fila y si es minimo o maximo en su fila de la traspuesta
-
 
 
 int min(int filas, int columnas, int f, int c, int (*m1)[columnas]){
