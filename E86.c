@@ -1,4 +1,45 @@
+#include <stdio.h>
+#include <math.h>
+#include <stdlib.h>
+#include <string.h>
+#include <conio.h>
+#include <time.h>
+//E86
 
+void identifica(void){
+	puts("*****Ángel del Pozo*****");
+	puts("**********53219*********");
+	puts("*********Diseño*********");
+}
+
+int main(void){
+identifica();
+while(1){
+	puts("Vamos a escribir una matriz, dime las filas");
+	int filas,columnas;
+	scanf("%i",&filas);
+	puts("Ahora dime las columnas");
+	scanf("%i",&columnas);
+	int m1[filas][columnas], f, c;
+//ahora llenamo la matriz
+	srand(time(NULL));
+	f=0;
+	do{	c=0;
+		do{	
+			m1[f][c]=rand()%30;
+			c++;
+		}while(c<columnas);
+		f++;
+	}while(f<filas);
+//le enseñamos la matriz al usuario
+	puts("Tu matriz es:");
+	f=0;
+	do{	c=0;
+		do{
+			printf("%i\t",m1[f][c]);
+			c++;
+		}while(c<columnas);	
+		puts("");
 		f++;
 	}while(f<filas);
 //ahora hay que hacer las cuentas
