@@ -21,6 +21,7 @@ int c;
 char fecha[64];//donde se guarda la hora
 
 main(){
+	setlocale(LC_ALL,"spanish");
 	srand(time(NULL));
 	int eleccion, dificultad, puntuacion, flag=1;
 	char dificult[10];
@@ -44,7 +45,7 @@ main(){
 				int ret;
 				ret = remove("scores.txt");
 				if(ret == 0){
-					printf("Reinicio con éxito");}
+					printf("Reinicio con Ã©xito");}
 				else{
 					printf("Reinicio sin exito, prueba vovler a ejecutar y luego reinicia");}
 				sleep(2);fflush(stdout);
@@ -152,9 +153,10 @@ juego(int* puntuacion,int dificultad, char dificult[10]){
 	int i,j,k, nobs=0, flagbloque;//nobs es el numero de obstaculos spawneados
 	char letra=letraaleatoria();
 	char letra2=letraaleatoria();
+	char letraobs=letraaleatoria();
 	while(choque(nobs)!=1){//codigo del juego, se ejecuta hasta que el usuario se choca
 		limpia();
-		printf("Dificultad: %s",dificult);printr(32,16);printf("Puntuación:%i",*puntuacion);printr(32,12);printf("%s",fecha);
+		printf("Dificultad: %s",dificult);printr(32,16);printf("PuntuaciÃ³n:%i",*puntuacion);printr(32,12);printf("%s",fecha);
 		p(1);printr(32,36);printf("ESQUIVALO");
 		printf("\nMueve la X usando la W, A, S, D, minusculas o mayusculas\n");
 		printr(letra,80);
@@ -170,7 +172,7 @@ juego(int* puntuacion,int dificultad, char dificult[10]){
 				k=0;			
 				do{
 					if((obstaculo[k].x==j)&&(obstaculo[k].y==i)){
-						printf("$");
+						printr(letraobs,1);
 						flagbloque=1;
 						break;}
 					k++;
@@ -347,7 +349,7 @@ puntuaciones(){
 	if(fopen("scores.txt","r")==NULL){
 		p(3);
 		printr(32,15);	
-		puts("Todavía no hay ninguna puntuacion, pruebe a jugar");
+		puts("TodavÃ­a no hay ninguna puntuacion, pruebe a jugar");
 		p(10);
 	}
 	else{
@@ -377,7 +379,7 @@ creditos(){
 	printr(32,36);
 	puts("ESQUIVALO");
 	printr(32,29);
-	puts("Créditos de producción");
+	puts("CrÃ©ditos de producciÃ³n");
 	p(2);printr(32,31);puts("Autor: adelpozoman");
 	p(1);printr(32,29);puts("Contacto: adelpozoman@gmail.com");
 	p(1);printr(32,33);puts("Entorno usado:");
